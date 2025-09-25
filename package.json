@@ -1,0 +1,40 @@
+{
+  "name": "@repo/root",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "ultracite lint",
+    "format": "ultracite format",
+    "typecheck": "turbo run typecheck",
+    "db:push": "turbo -F @repo/db push",
+    "db:studio": "turbo -F @repo/db studio",
+    "auth:generate": "bun -F @repo/auth generate"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.1.2",
+    "lefthook": "^1.12.2",
+    "turbo": "^2.5.5",
+    "ultracite": "^5.0.47"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "packageManager": "bun@1.2.19",
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "packages/*",
+      "tooling/*"
+    ],
+    "catalog": {
+      "typescript": "^5.8.3",
+      "zod": "^4.0.5",
+      "drizzle-orm": "^0.44.3",
+      "@t3-oss/env-core": "^0.13.8"
+    }
+  },
+  "dependencies": {
+    "next-intl": "^4.3.9"
+  }
+}

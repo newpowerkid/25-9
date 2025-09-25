@@ -1,0 +1,334 @@
+/* Apple Liquid Glass Theme System */
+
+/* ========================================
+   Light Theme (Default)
+   ======================================== */
+
+[data-theme="light"],
+:root {
+  /* Glass Material Properties */
+  --glass-bg-primary: rgba(255, 255, 255, 0.8);
+  --glass-bg-secondary: rgba(255, 255, 255, 0.6);
+  --glass-bg-tertiary: rgba(255, 255, 255, 0.4);
+  
+  /* Text Colors */
+  --glass-text-primary: rgba(0, 0, 0, 0.9);
+  --glass-text-secondary: rgba(0, 0, 0, 0.7);
+  --glass-text-tertiary: rgba(0, 0, 0, 0.5);
+  --glass-text-inverse: rgba(255, 255, 255, 0.9);
+  
+  /* Border Colors */
+  --glass-border-primary: rgba(255, 255, 255, 0.2);
+  --glass-border-secondary: rgba(255, 255, 255, 0.1);
+  --glass-border-focus: rgba(0, 122, 255, 0.5);
+  
+  /* Shadow Colors */
+  --glass-shadow-light: rgba(0, 0, 0, 0.05);
+  --glass-shadow-medium: rgba(0, 0, 0, 0.1);
+  --glass-shadow-heavy: rgba(0, 0, 0, 0.15);
+  
+  /* Highlight Colors */
+  --glass-highlight-primary: rgba(255, 255, 255, 0.15);
+  --glass-highlight-secondary: rgba(255, 255, 255, 0.1);
+  --glass-illumination: rgba(255, 255, 255, 0.05);
+  
+  /* System Colors */
+  --glass-blue: #007AFF;
+  --glass-purple: #AF52DE;
+  --glass-pink: #FF2D55;
+  --glass-orange: #FF9500;
+  --glass-green: #34C759;
+  --glass-red: #FF3B30;
+  --glass-yellow: #FFCC00;
+  --glass-indigo: #5856D6;
+  --glass-teal: #5AC8FA;
+  
+  /* Tinted Glass Colors */
+  --glass-tint-blue: rgba(0, 122, 255, 0.1);
+  --glass-tint-purple: rgba(175, 82, 222, 0.1);
+  --glass-tint-pink: rgba(255, 45, 85, 0.1);
+  --glass-tint-orange: rgba(255, 149, 0, 0.1);
+  --glass-tint-green: rgba(52, 199, 89, 0.1);
+  --glass-tint-red: rgba(255, 59, 48, 0.1);
+  --glass-tint-yellow: rgba(255, 204, 0, 0.1);
+  --glass-tint-indigo: rgba(88, 86, 214, 0.1);
+  --glass-tint-teal: rgba(90, 200, 250, 0.1);
+  
+  /* Status Colors */
+  --glass-success: rgba(52, 199, 89, 0.8);
+  --glass-warning: rgba(255, 149, 0, 0.8);
+  --glass-error: rgba(255, 59, 48, 0.8);
+  --glass-info: rgba(0, 122, 255, 0.8);
+  
+  /* Background Gradients */
+  --glass-gradient-primary: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.9) 0%, 
+    rgba(255, 255, 255, 0.7) 100%);
+  --glass-gradient-secondary: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.7) 0%, 
+    rgba(255, 255, 255, 0.5) 100%);
+}
+
+/* ========================================
+   Dark Theme
+   ======================================== */
+
+[data-theme="dark"] {
+  /* Glass Material Properties */
+  --glass-bg-primary: rgba(28, 28, 30, 0.8);
+  --glass-bg-secondary: rgba(44, 44, 46, 0.8);
+  --glass-bg-tertiary: rgba(58, 58, 60, 0.8);
+  
+  /* Text Colors */
+  --glass-text-primary: rgba(255, 255, 255, 0.9);
+  --glass-text-secondary: rgba(255, 255, 255, 0.7);
+  --glass-text-tertiary: rgba(255, 255, 255, 0.5);
+  --glass-text-inverse: rgba(0, 0, 0, 0.9);
+  
+  /* Border Colors */
+  --glass-border-primary: rgba(255, 255, 255, 0.1);
+  --glass-border-secondary: rgba(255, 255, 255, 0.05);
+  --glass-border-focus: rgba(0, 122, 255, 0.6);
+  
+  /* Shadow Colors */
+  --glass-shadow-light: rgba(0, 0, 0, 0.2);
+  --glass-shadow-medium: rgba(0, 0, 0, 0.3);
+  --glass-shadow-heavy: rgba(0, 0, 0, 0.4);
+  
+  /* Highlight Colors */
+  --glass-highlight-primary: rgba(255, 255, 255, 0.1);
+  --glass-highlight-secondary: rgba(255, 255, 255, 0.05);
+  --glass-illumination: rgba(255, 255, 255, 0.03);
+  
+  /* Tinted Glass Colors (Adjusted for dark theme) */
+  --glass-tint-blue: rgba(0, 122, 255, 0.15);
+  --glass-tint-purple: rgba(175, 82, 222, 0.15);
+  --glass-tint-pink: rgba(255, 45, 85, 0.15);
+  --glass-tint-orange: rgba(255, 149, 0, 0.15);
+  --glass-tint-green: rgba(52, 199, 89, 0.15);
+  --glass-tint-red: rgba(255, 59, 48, 0.15);
+  --glass-tint-yellow: rgba(255, 204, 0, 0.15);
+  --glass-tint-indigo: rgba(88, 86, 214, 0.15);
+  --glass-tint-teal: rgba(90, 200, 250, 0.15);
+  
+  /* Background Gradients */
+  --glass-gradient-primary: linear-gradient(135deg, 
+    rgba(28, 28, 30, 0.9) 0%, 
+    rgba(44, 44, 46, 0.9) 100%);
+  --glass-gradient-secondary: linear-gradient(135deg, 
+    rgba(44, 44, 46, 0.9) 0%, 
+    rgba(58, 58, 60, 0.9) 100%);
+}
+
+/* ========================================
+   High Contrast Theme
+   ======================================== */
+
+[data-theme="high-contrast"] {
+  /* Glass Material Properties */
+  --glass-bg-primary: rgba(255, 255, 255, 0.95);
+  --glass-bg-secondary: rgba(255, 255, 255, 0.9);
+  --glass-bg-tertiary: rgba(255, 255, 255, 0.85);
+  
+  /* Text Colors */
+  --glass-text-primary: rgba(0, 0, 0, 1);
+  --glass-text-secondary: rgba(0, 0, 0, 0.8);
+  --glass-text-tertiary: rgba(0, 0, 0, 0.6);
+  --glass-text-inverse: rgba(255, 255, 255, 1);
+  
+  /* Border Colors */
+  --glass-border-primary: rgba(0, 0, 0, 0.3);
+  --glass-border-secondary: rgba(0, 0, 0, 0.2);
+  --glass-border-focus: rgba(0, 122, 255, 0.8);
+  
+  /* Shadow Colors */
+  --glass-shadow-light: rgba(0, 0, 0, 0.1);
+  --glass-shadow-medium: rgba(0, 0, 0, 0.2);
+  --glass-shadow-heavy: rgba(0, 0, 0, 0.3);
+  
+  /* Highlight Colors */
+  --glass-highlight-primary: rgba(0, 0, 0, 0.1);
+  --glass-highlight-secondary: rgba(0, 0, 0, 0.05);
+  --glass-illumination: rgba(0, 0, 0, 0.03);
+}
+
+/* ========================================
+   Color Theme Variants
+   ======================================== */
+
+/* Blue Theme */
+[data-theme="blue"] {
+  --glass-bg-primary: rgba(0, 122, 255, 0.8);
+  --glass-bg-secondary: rgba(0, 122, 255, 0.6);
+  --glass-bg-tertiary: rgba(0, 122, 255, 0.4);
+  --glass-text-primary: rgba(255, 255, 255, 0.9);
+  --glass-text-secondary: rgba(255, 255, 255, 0.7);
+  --glass-text-tertiary: rgba(255, 255, 255, 0.5);
+  --glass-border-primary: rgba(255, 255, 255, 0.2);
+  --glass-border-secondary: rgba(255, 255, 255, 0.1);
+}
+
+/* Purple Theme */
+[data-theme="purple"] {
+  --glass-bg-primary: rgba(175, 82, 222, 0.8);
+  --glass-bg-secondary: rgba(175, 82, 222, 0.6);
+  --glass-bg-tertiary: rgba(175, 82, 222, 0.4);
+  --glass-text-primary: rgba(255, 255, 255, 0.9);
+  --glass-text-secondary: rgba(255, 255, 255, 0.7);
+  --glass-text-tertiary: rgba(255, 255, 255, 0.5);
+  --glass-border-primary: rgba(255, 255, 255, 0.2);
+  --glass-border-secondary: rgba(255, 255, 255, 0.1);
+}
+
+/* Green Theme */
+[data-theme="green"] {
+  --glass-bg-primary: rgba(52, 199, 89, 0.8);
+  --glass-bg-secondary: rgba(52, 199, 89, 0.6);
+  --glass-bg-tertiary: rgba(52, 199, 89, 0.4);
+  --glass-text-primary: rgba(255, 255, 255, 0.9);
+  --glass-text-secondary: rgba(255, 255, 255, 0.7);
+  --glass-text-tertiary: rgba(255, 255, 255, 0.5);
+  --glass-border-primary: rgba(255, 255, 255, 0.2);
+  --glass-border-secondary: rgba(255, 255, 255, 0.1);
+}
+
+/* Pink Theme */
+[data-theme="pink"] {
+  --glass-bg-primary: rgba(255, 45, 85, 0.8);
+  --glass-bg-secondary: rgba(255, 45, 85, 0.6);
+  --glass-bg-tertiary: rgba(255, 45, 85, 0.4);
+  --glass-text-primary: rgba(255, 255, 255, 0.9);
+  --glass-text-secondary: rgba(255, 255, 255, 0.7);
+  --glass-text-tertiary: rgba(255, 255, 255, 0.5);
+  --glass-border-primary: rgba(255, 255, 255, 0.2);
+  --glass-border-secondary: rgba(255, 255, 255, 0.1);
+}
+
+/* ========================================
+   Theme-aware Component Styles
+   ======================================== */
+
+/* Glass Card Theme Support */
+.glass-card {
+  background: var(--glass-bg-primary);
+  color: var(--glass-text-primary);
+  border-color: var(--glass-border-primary);
+  box-shadow: 0 8px 32px var(--glass-shadow-medium);
+}
+
+.glass-card-title {
+  color: var(--glass-text-primary);
+}
+
+.glass-card-subtitle {
+  color: var(--glass-text-secondary);
+}
+
+/* Glass Button Theme Support */
+.glass-button {
+  background: var(--glass-bg-secondary);
+  color: var(--glass-text-primary);
+  border-color: var(--glass-border-primary);
+}
+
+.glass-button:hover {
+  background: var(--glass-bg-primary);
+}
+
+.glass-button:focus {
+  border-color: var(--glass-border-focus);
+  box-shadow: 0 0 0 3px var(--glass-border-focus);
+}
+
+/* Glass Input Theme Support */
+.glass-input {
+  background: var(--glass-bg-secondary);
+  color: var(--glass-text-primary);
+  border-color: var(--glass-border-primary);
+}
+
+.glass-input:focus {
+  border-color: var(--glass-border-focus);
+  box-shadow: 0 0 0 3px var(--glass-border-focus);
+  background: var(--glass-bg-primary);
+}
+
+.glass-input::placeholder {
+  color: var(--glass-text-tertiary);
+}
+
+/* Glass Navigation Theme Support */
+.glass-nav {
+  background: var(--glass-bg-primary);
+  border-color: var(--glass-border-primary);
+}
+
+.glass-nav-item {
+  color: var(--glass-text-secondary);
+}
+
+.glass-nav-item.active {
+  background: var(--glass-bg-secondary);
+  color: var(--glass-text-primary);
+}
+
+.glass-nav-item:hover:not(.active) {
+  background: var(--glass-bg-tertiary);
+  color: var(--glass-text-primary);
+}
+
+/* ========================================
+   Theme Transition Animations
+   ======================================== */
+
+* {
+  transition: 
+    background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ========================================
+   Accessibility Enhancements
+   ======================================== */
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* High Contrast Support */
+@media (prefers-contrast: high) {
+  :root {
+    --glass-bg-primary: rgba(255, 255, 255, 0.95);
+    --glass-text-primary: rgba(0, 0, 0, 1);
+    --glass-border-primary: rgba(0, 0, 0, 0.3);
+  }
+  
+  [data-theme="dark"] {
+    --glass-bg-primary: rgba(0, 0, 0, 0.95);
+    --glass-text-primary: rgba(255, 255, 255, 1);
+    --glass-border-primary: rgba(255, 255, 255, 0.3);
+  }
+}
+
+/* Color Scheme Preference */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --glass-bg-primary: rgba(28, 28, 30, 0.8);
+    --glass-bg-secondary: rgba(44, 44, 46, 0.8);
+    --glass-bg-tertiary: rgba(58, 58, 60, 0.8);
+    --glass-text-primary: rgba(255, 255, 255, 0.9);
+    --glass-text-secondary: rgba(255, 255, 255, 0.7);
+    --glass-text-tertiary: rgba(255, 255, 255, 0.5);
+    --glass-border-primary: rgba(255, 255, 255, 0.1);
+    --glass-border-secondary: rgba(255, 255, 255, 0.05);
+    --glass-shadow-light: rgba(0, 0, 0, 0.2);
+    --glass-shadow-medium: rgba(0, 0, 0, 0.3);
+    --glass-shadow-heavy: rgba(0, 0, 0, 0.4);
+  }
+}

@@ -1,0 +1,390 @@
+/* Additional Glass Input Styles */
+.glass-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.glass-input-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--glass-text-secondary);
+}
+
+.glass-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.glass-input-icon {
+  position: absolute;
+  z-index: 1;
+  color: var(--glass-text-tertiary);
+  pointer-events: none;
+}
+
+.glass-input-icon-left {
+  left: 12px;
+}
+
+.glass-input-icon-right {
+  right: 12px;
+}
+
+.glass-input-with-icon-left {
+  padding-left: 40px;
+}
+
+.glass-input-with-icon-right {
+  padding-right: 40px;
+}
+
+.glass-input-error-text {
+  font-size: 0.75rem;
+  color: var(--glass-error);
+}
+
+.glass-input-helper-text {
+  font-size: 0.75rem;
+  color: var(--glass-text-tertiary);
+}
+
+.glass-input-error {
+  border-color: var(--glass-error);
+}
+
+.glass-input-error:focus {
+  border-color: var(--glass-error);
+  box-shadow: 0 0 0 3px rgba(255, 59, 48, 0.1);
+}
+
+/* Additional Button Styles */
+.glass-button-sm {
+  padding: 8px 12px;
+  font-size: 0.875rem;
+}
+
+.glass-button-lg {
+  padding: 12px 24px;
+  font-size: 1.125rem;
+}
+
+/* Additional Navigation Styles */
+.glass-nav-vertical {
+  flex-direction: column;
+}
+
+.glass-nav-sm .glass-nav-item {
+  padding: 8px 12px;
+  font-size: 0.875rem;
+}
+
+.glass-nav-lg .glass-nav-item {
+  padding: 16px 20px;
+  font-size: 1.125rem;
+}
+
+/* Additional Modal Styles */
+.glass-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--glass-border-secondary);
+}
+
+.glass-modal-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--glass-text-primary);
+  margin: 0;
+}
+
+.glass-modal-close {
+  background: none;
+  border: none;
+  color: var(--glass-text-tertiary);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.glass-modal-close:hover {
+  color: var(--glass-text-primary);
+  background: var(--glass-bg-tertiary);
+}
+
+.glass-modal-body {
+  color: var(--glass-text-secondary);
+}
+
+/* Additional Utility Classes */
+.glass-text-primary { color: var(--glass-text-primary); }
+.glass-text-secondary { color: var(--glass-text-secondary); }
+.glass-text-tertiary { color: var(--glass-text-tertiary); }
+.glass-text-inverse { color: var(--glass-text-inverse); }
+
+.glass-bg-primary { background: var(--glass-bg-primary); }
+.glass-bg-secondary { background: var(--glass-bg-secondary); }
+.glass-bg-tertiary { background: var(--glass-bg-tertiary); }
+
+.glass-border-primary { border-color: var(--glass-border-primary); }
+.glass-border-secondary { border-color: var(--glass-border-secondary); }
+.glass-border-focus { border-color: var(--glass-border-focus); }
+
+/* Glass Form Styles */
+.glass-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.glass-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.glass-form-row {
+  display: flex;
+  gap: 1rem;
+  align-items: end;
+}
+
+.glass-form-row .glass-input-wrapper {
+  flex: 1;
+}
+
+/* Glass List Styles */
+.glass-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.glass-list-item {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--glass-border-secondary);
+  transition: background-color 0.2s;
+}
+
+.glass-list-item:hover {
+  background: var(--glass-bg-tertiary);
+}
+
+.glass-list-item:last-child {
+  border-bottom: none;
+}
+
+/* Glass Badge Styles */
+.glass-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: var(--glass-bg-secondary);
+  color: var(--glass-text-primary);
+  border: 1px solid var(--glass-border-primary);
+  border-radius: 0.375rem;
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+}
+
+.glass-badge-primary {
+  background: var(--glass-blue);
+  color: white;
+  border-color: var(--glass-blue);
+}
+
+.glass-badge-success {
+  background: var(--glass-green);
+  color: white;
+  border-color: var(--glass-green);
+}
+
+.glass-badge-warning {
+  background: var(--glass-orange);
+  color: white;
+  border-color: var(--glass-orange);
+}
+
+.glass-badge-danger {
+  background: var(--glass-red);
+  color: white;
+  border-color: var(--glass-red);
+}
+
+/* Glass Progress Bar */
+.glass-progress {
+  width: 100%;
+  height: 8px;
+  background: var(--glass-bg-tertiary);
+  border-radius: 4px;
+  overflow: hidden;
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+}
+
+.glass-progress-bar {
+  height: 100%;
+  background: var(--glass-blue);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.glass-progress-success .glass-progress-bar {
+  background: var(--glass-green);
+}
+
+.glass-progress-warning .glass-progress-bar {
+  background: var(--glass-orange);
+}
+
+.glass-progress-danger .glass-progress-bar {
+  background: var(--glass-red);
+}
+
+/* Glass Tooltip */
+.glass-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.glass-tooltip-content {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem 0.75rem;
+  background: var(--glass-bg-primary);
+  color: var(--glass-text-primary);
+  border: 1px solid var(--glass-border-primary);
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s;
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  z-index: 1000;
+}
+
+.glass-tooltip-content::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: var(--glass-border-primary);
+}
+
+.glass-tooltip:hover .glass-tooltip-content {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Glass Divider */
+.glass-divider {
+  height: 1px;
+  background: var(--glass-border-secondary);
+  margin: 1rem 0;
+}
+
+.glass-divider-vertical {
+  width: 1px;
+  height: 100%;
+  background: var(--glass-border-secondary);
+  margin: 0 1rem;
+}
+
+/* Glass Spinner */
+.glass-spinner-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.glass-spinner-lg {
+  width: 60px;
+  height: 60px;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-top: 4px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  animation: glassSpinner 1s linear infinite;
+}
+
+/* Glass Alert */
+.glass-alert {
+  padding: 1rem;
+  border-radius: var(--glass-border-radius);
+  border: 1px solid var(--glass-border-primary);
+  background: var(--glass-bg-secondary);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  margin-bottom: 1rem;
+}
+
+.glass-alert-success {
+  background: var(--glass-tint-green);
+  border-color: var(--glass-green);
+  color: var(--glass-green);
+}
+
+.glass-alert-warning {
+  background: var(--glass-tint-orange);
+  border-color: var(--glass-orange);
+  color: var(--glass-orange);
+}
+
+.glass-alert-error {
+  background: var(--glass-tint-red);
+  border-color: var(--glass-red);
+  color: var(--glass-red);
+}
+
+.glass-alert-info {
+  background: var(--glass-tint-blue);
+  border-color: var(--glass-blue);
+  color: var(--glass-blue);
+}
+
+/* Glass Avatar */
+.glass-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--glass-bg-secondary);
+  border: 2px solid var(--glass-border-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: var(--glass-text-primary);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+}
+
+.glass-avatar-sm {
+  width: 24px;
+  height: 24px;
+  font-size: 0.75rem;
+}
+
+.glass-avatar-lg {
+  width: 60px;
+  height: 60px;
+  font-size: 1.25rem;
+}
+
+.glass-avatar-xl {
+  width: 80px;
+  height: 80px;
+  font-size: 1.5rem;
+}

@@ -1,0 +1,434 @@
+/* Apple Liquid Glass Animations & Advanced Effects */
+
+/* ========================================
+   Advanced Glass Animations
+   ======================================== */
+
+/* Liquid Glass Morphing Animation */
+@keyframes glassMorph {
+  0% {
+    border-radius: 16px;
+    transform: scale(1);
+  }
+  50% {
+    border-radius: 24px;
+    transform: scale(1.02);
+  }
+  100% {
+    border-radius: 16px;
+    transform: scale(1);
+  }
+}
+
+.glass-morph-animated {
+  animation: glassMorph 2s ease-in-out infinite;
+}
+
+/* Glass Liquid Flow Animation */
+@keyframes glassFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.glass-flow {
+  background: linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.03)
+  );
+  background-size: 400% 400%;
+  animation: glassFlow 3s ease infinite;
+}
+
+/* Glass Shimmer Effect */
+@keyframes glassShimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.glass-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-shimmer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transform: translateX(-100%);
+  animation: glassShimmer 2s infinite;
+}
+
+/* Glass Pulse Animation */
+@keyframes glassPulse {
+  0%, 100% {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+  50% {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 0 0 10px rgba(255, 255, 255, 0.1);
+  }
+}
+
+.glass-pulse {
+  animation: glassPulse 2s ease-in-out infinite;
+}
+
+/* Glass Wave Animation */
+@keyframes glassWave {
+  0%, 100% {
+    border-radius: 16px;
+  }
+  25% {
+    border-radius: 20px 16px 16px 20px;
+  }
+  50% {
+    border-radius: 16px 20px 20px 16px;
+  }
+  75% {
+    border-radius: 20px 16px 20px 16px;
+  }
+}
+
+.glass-wave {
+  animation: glassWave 3s ease-in-out infinite;
+}
+
+/* Glass Bounce Animation */
+@keyframes glassBounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.glass-bounce {
+  animation: glassBounce 2s infinite;
+}
+
+/* Glass Rotate Animation */
+@keyframes glassRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.glass-rotate {
+  animation: glassRotate 20s linear infinite;
+}
+
+/* Glass Scale Animation */
+@keyframes glassScale {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.glass-scale {
+  animation: glassScale 2s ease-in-out infinite;
+}
+
+/* ========================================
+   Interactive Animations
+   ======================================== */
+
+/* Glass Hover Lift */
+.glass-hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-hover-lift:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Glass Hover Tilt */
+.glass-hover-tilt {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.glass-hover-tilt:hover {
+  transform: perspective(1000px) rotateX(5deg) rotateY(5deg);
+}
+
+/* Glass Hover Glow */
+.glass-hover-glow {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-hover-glow:hover {
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.2),
+    0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+/* Glass Click Ripple */
+@keyframes glassRipple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.glass-click-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-click-ripple::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  transform: scale(0);
+  animation: glassRipple 0.6s linear;
+  pointer-events: none;
+}
+
+/* ========================================
+   Loading Animations
+   ======================================== */
+
+/* Glass Loading Spinner */
+@keyframes glassSpinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.glass-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-top: 3px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  animation: glassSpinner 1s linear infinite;
+}
+
+/* Glass Loading Dots */
+@keyframes glassDots {
+  0%, 20% {
+    color: rgba(255, 255, 255, 0);
+    text-shadow: 
+      0.25em 0 0 rgba(255, 255, 255, 0),
+      0.5em 0 0 rgba(255, 255, 255, 0);
+  }
+  40% {
+    color: rgba(255, 255, 255, 0.6);
+    text-shadow: 
+      0.25em 0 0 rgba(255, 255, 255, 0),
+      0.5em 0 0 rgba(255, 255, 255, 0);
+  }
+  60% {
+    text-shadow: 
+      0.25em 0 0 rgba(255, 255, 255, 0.6),
+      0.5em 0 0 rgba(255, 255, 255, 0);
+  }
+  80%, 100% {
+    text-shadow: 
+      0.25em 0 0 rgba(255, 255, 255, 0.6),
+      0.5em 0 0 rgba(255, 255, 255, 0.6);
+  }
+}
+
+.glass-loading-dots {
+  animation: glassDots 1.4s infinite linear;
+}
+
+/* Glass Loading Pulse */
+@keyframes glassLoadingPulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.glass-loading-pulse {
+  animation: glassLoadingPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* ========================================
+   Advanced Glass Effects
+   ======================================== */
+
+/* Glass Parallax Effect */
+.glass-parallax {
+  transform-style: preserve-3d;
+  transition: transform 0.1s ease-out;
+}
+
+.glass-parallax:hover {
+  transform: translateZ(20px);
+}
+
+/* Glass Reflection Effect */
+.glass-reflection {
+  position: relative;
+}
+
+.glass-reflection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* Glass Distortion Effect */
+.glass-distortion {
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-distortion::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 70%
+  );
+  animation: glassRotate 10s linear infinite;
+  pointer-events: none;
+}
+
+/* Glass Gradient Border */
+.glass-gradient-border {
+  position: relative;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57);
+  padding: 2px;
+  border-radius: var(--glass-border-radius);
+}
+
+.glass-gradient-border::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: rgba(255, 255, 255, var(--glass-opacity));
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border-radius: calc(var(--glass-border-radius) - 2px);
+  z-index: -1;
+}
+
+/* ========================================
+   Responsive Animations
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .glass-morph-animated,
+  .glass-flow,
+  .glass-shimmer,
+  .glass-pulse,
+  .glass-wave,
+  .glass-bounce,
+  .glass-rotate,
+  .glass-scale,
+  .glass-spinner,
+  .glass-loading-dots,
+  .glass-loading-pulse,
+  .glass-distortion {
+    animation: none;
+  }
+  
+  .glass-hover-lift:hover,
+  .glass-hover-tilt:hover,
+  .glass-hover-glow:hover {
+    transform: none;
+  }
+}
+
+/* ========================================
+   Performance Optimizations
+   ======================================== */
+
+.glass-gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.glass-will-change {
+  will-change: transform, opacity, box-shadow;
+}
+
+/* ========================================
+   Animation Utilities
+   ======================================== */
+
+.glass-animate-delay-1 { animation-delay: 0.1s; }
+.glass-animate-delay-2 { animation-delay: 0.2s; }
+.glass-animate-delay-3 { animation-delay: 0.3s; }
+.glass-animate-delay-4 { animation-delay: 0.4s; }
+.glass-animate-delay-5 { animation-delay: 0.5s; }
+
+.glass-animate-duration-fast { animation-duration: 0.5s; }
+.glass-animate-duration-normal { animation-duration: 1s; }
+.glass-animate-duration-slow { animation-duration: 2s; }
+
+.glass-animate-iteration-1 { animation-iteration-count: 1; }
+.glass-animate-iteration-2 { animation-iteration-count: 2; }
+.glass-animate-iteration-infinite { animation-iteration-count: infinite; }

@@ -1,0 +1,32 @@
+{
+  "typescript.tsdk": "./node_modules/typescript/lib",
+
+  "editor.defaultFormatter": "biomejs.biome",
+
+  "[javascript][typescript][javascriptreact][typescriptreact][json][jsonc][css][graphql]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+
+  "editor.codeActionsOnSave": {
+    "source.fixAll.biome": "explicit",
+    "source.action.useSortedKeys.biome": "explicit",
+    "source.organizeImports.biome": "explicit"
+  },
+
+  "emmet.showExpandedAbbreviation": "never",
+  "json.schemaDownload.enable": true,
+  "kiroAgent.configureMCP": "Disabled",
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "i18n-ally.localesPaths": [
+    "apps/web/src/i18n",
+    "apps/web/src/messages"
+  ]
+}

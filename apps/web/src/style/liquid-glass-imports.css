@@ -1,0 +1,199 @@
+/* Import all Liquid Glass CSS files */
+
+@import './liquid-glass.css';
+@import './liquid-glass-animations.css';
+@import './liquid-glass-themes.css';
+@import './liquid-glass-extensions.css';
+@import './liquid-glass-components.css';
+
+/* Additional CSS for Demo Page */
+.liquid-glass-demo {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+/* Demo specific styles */
+.liquid-glass-demo .grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.liquid-glass-demo .grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.liquid-glass-demo .grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.liquid-glass-demo .grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.liquid-glass-demo .grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (min-width: 768px) {
+  .liquid-glass-demo .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  
+  .liquid-glass-demo .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .liquid-glass-demo .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.liquid-glass-demo .col-span-full {
+  grid-column: 1 / -1;
+}
+
+.liquid-glass-demo .space-y-4 > * + * {
+  margin-top: 1rem;
+}
+
+.liquid-glass-demo .mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.liquid-glass-demo .mb-4 {
+  margin-bottom: 1rem;
+}
+
+.liquid-glass-demo .mb-8 {
+  margin-bottom: 2rem;
+}
+
+.liquid-glass-demo .text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.liquid-glass-demo .font-bold {
+  font-weight: 700;
+}
+
+.liquid-glass-demo .text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.liquid-glass-demo .text-center {
+  text-align: center;
+}
+
+.liquid-glass-demo .min-h-screen {
+  min-height: 100vh;
+}
+
+.liquid-glass-demo .p-4 {
+  padding: 1rem;
+}
+
+.liquid-glass-demo .w-full {
+  width: 100%;
+}
+
+/* Background gradients for demo */
+.bg-gradient-to-br {
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+}
+
+.from-blue-50 {
+  --tw-gradient-from: #eff6ff;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(239, 246, 255, 0));
+}
+
+.via-purple-50 {
+  --tw-gradient-to: rgba(250, 245, 255, 0);
+  --tw-gradient-stops: var(--tw-gradient-from), #faf5ff, var(--tw-gradient-to, rgba(250, 245, 255, 0));
+}
+
+.to-pink-50 {
+  --tw-gradient-to: #fdf2f8;
+}
+
+.dark\:from-gray-900 {
+  --tw-gradient-from: #111827;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(17, 24, 39, 0));
+}
+
+.dark\:via-purple-900 {
+  --tw-gradient-to: rgba(88, 28, 135, 0);
+  --tw-gradient-stops: var(--tw-gradient-from), #581c87, var(--tw-gradient-to, rgba(88, 28, 135, 0));
+}
+
+.dark\:to-pink-900 {
+  --tw-gradient-to: #831843;
+}
+
+/* Animation classes for demo */
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Utility classes for demo */
+.-ml-1 {
+  margin-left: -0.25rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.h-4 {
+  height: 1rem;
+}
+
+.w-4 {
+  width: 1rem;
+}
+
+.opacity-25 {
+  opacity: 0.25;
+}
+
+.opacity-75 {
+  opacity: 0.75;
+}
+
+/* Dark mode utilities */
+.dark\:text-white {
+  color: white;
+}
+
+/* Focus utilities */
+.focus\:outline-none:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+/* Responsive utilities */
+@media (max-width: 640px) {
+  .liquid-glass-demo .sm\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .liquid-glass-demo .print\:hidden {
+    display: none !important;
+  }
+}
