@@ -5,12 +5,12 @@ import { Plus, Edit, Trash2, Clock, Users, Calendar } from 'lucide-react'
 
 import { useGetSchedulesQuery, useCreateScheduleMutation, useUpdateScheduleMutation, useDeleteScheduleMutation, useSchedulesSSE, type Schedule, type ScheduleClassName, type ScheduleDay } from '~/lib/hooks/schedule'
 import {
-    GlassCard,
-    GlassButton,
     GlassInput,
     GlassContainer,
 } from "~/components/ui/liquid-glass"
 import GlassModal from '~/components/ui/liquid-glass/glass-modal'
+import GlassButton from '~/components/ui/liquid-glass/glass-button'
+import GlassCard from '~/components/ui/liquid-glass/glass-card'
 
 export default function SchedulePage() {
     const [isCreateModalOpen, setIsCreateModalOpen] = useState(false)
@@ -154,7 +154,7 @@ function MobileCardView({ schedules, onEdit, onDelete }: MobileCardViewProps) {
                                 <Users className="w-4 h-4 text-white" />
                             </div>
                             <div>
-                                <h3 className="text-lg font-semibold text-white">{schedule.classesName}</h3>
+                                <h3 className="text-lg font-semibold text-gray-300">{schedule.classesName}</h3>
                                 {schedule.ages && (
                                     <p className="text-sm text-slate-300">Ages: {schedule.ages}</p>
                                 )}
@@ -238,7 +238,7 @@ function DesktopTableView({ schedules, onEdit, onDelete }: DesktopTableViewProps
                                         <div className="p-2 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500">
                                             <Users className="w-4 h-4 text-white" />
                                         </div>
-                                        <span className="text-white font-medium">{schedule.classesName}</span>
+                                        <span className="text-gray-300 font-medium">{schedule.classesName}</span>
                                     </div>
                                 </td>
                                 <td className="p-6 text-slate-300">{schedule.ages || '-'}</td>
