@@ -7,6 +7,7 @@ import { NavbarLink } from "./navbar-link";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { Menu, X, Sparkles } from "lucide-react";
+import { Icons } from "~/components/shared";
 
 export const Navbar = () => {
   const t = useTranslations("Home");
@@ -29,7 +30,7 @@ export const Navbar = () => {
               href="/"
             >
               <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-[#69c8c6] to-[#c1d72e] shadow-lg shadow-blue-500/25 ios-transition group-hover:shadow-xl group-hover:shadow-blue-500/40 float-animation glow-effect">
-                <Sparkles className="h-4 w-4 text-white" />
+                <Icons.logo className="h-4 w-4 text-white" />
               </div>
               <span className="gradient-text from-[#69c8c6] to-[#c1d72e] font-barrio">
                 {t("name")}
